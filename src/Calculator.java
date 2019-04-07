@@ -16,6 +16,9 @@ public class Calculator {
                 case SUM:
                     sum();
                     break;
+                case DIFFERENCE:
+                    difference();
+                    break;
             }
         }
     }
@@ -28,6 +31,18 @@ public class Calculator {
                 double b = scanner.nextDouble();
                 double sum = a + b;
                 System.out.println(sum);
+            }
+        }
+    }
+
+    private static void difference() {
+        System.out.println("Введите 2 числа: ");
+        if (scanner.hasNextDouble()) {
+            double a = scanner.nextDouble();
+            if (scanner.hasNextDouble()) {
+                double b = scanner.nextDouble();
+                double dif = a - b;
+                System.out.println(dif);
             }
         }
     }
